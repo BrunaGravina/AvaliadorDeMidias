@@ -1,3 +1,5 @@
+package br.com.principal.bru;
+
 import br.com.calculos.bru.Calculator;
 import br.com.calculos.bru.RecomendationFilter;
 import br.com.modelos.bru.Episodes;
@@ -50,14 +52,6 @@ public class Principal {
         filtro.filtra(serie);
         filtro.filtra(outro);
         filtro.filtra(terceiroFilme);
-
-        ArrayList<Movie>MovieList = new ArrayList<>();
-        MovieList.add(terceiroFilme);
-        MovieList.add(outro);
-        MovieList.add(favorito);
-        System.out.println("O tamanho da sua lista de filmes é: " + MovieList.size());
-        System.out.println("Primeiro filme: " + MovieList.get(0).getNome());
-        System.out.println("Minha lista: " + MovieList);
 
 
 
