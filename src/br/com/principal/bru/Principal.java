@@ -14,10 +14,12 @@ public class Principal {
         Movie favorito = new Movie("Star Wars Episódio IV - Uma nova esperança", 1970);
         favorito.setDuracaoEmMinutos(180);
         favorito.setIncluidoNoPlano(true);
+        favorito.avalia(9);
 
         Movie outro = new Movie("Detona Ralph", 2013);
         outro.setDuracaoEmMinutos(100);
         outro.setIncluidoNoPlano(true);
+        outro.avalia(5);
 
         Movie terceiroFilme = new Movie("Jogos Vorazes", 2012);
         terceiroFilme.setDuracaoEmMinutos(142);

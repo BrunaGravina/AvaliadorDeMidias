@@ -23,10 +23,6 @@ public class Movie extends Title implements Score {
         return (int) (pegaMedia() / 2);
     }
 
-    @Override
-    public String toString() {
-        return "Filme: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
-    }
 }
 
 

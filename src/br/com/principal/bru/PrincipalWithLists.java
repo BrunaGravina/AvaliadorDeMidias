@@ -21,8 +21,18 @@ public class PrincipalWithLists {
         Watched.add(outro);
         Watched.add(favorito);
         Watched.add(serie);
-        System.out.println("O tamanho da sua lista de filmes é: " + Watched.size());
-        System.out.println("Primeiro filme: " + Watched.get(0).getNome());
-        System.out.println("Minha lista: " + Watched);
+//        System.out.println("O tamanho da sua lista de filmes é: " + Watched.size());
+//        System.out.println("Primeiro filme: " + Watched.get(0).getNome());
+//        System.out.println("Minha lista: " + Watched);
+//        Exemplos de métodos de Array List.
+
+
+        for (Title item : Watched) {
+            System.out.println(item);
+            if (item instanceof Movie filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificacao: " + filme.getClassificacao());
+            }
+
+        }
     }
 }
