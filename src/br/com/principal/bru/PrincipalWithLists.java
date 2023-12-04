@@ -5,6 +5,8 @@ import br.com.modelos.bru.Show;
 import br.com.modelos.bru.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalWithLists {
     public static void main(String[] args) {
@@ -21,6 +23,13 @@ public class PrincipalWithLists {
         Watched.add(outro);
         Watched.add(favorito);
         Watched.add(serie);
+
+        Collections.sort(Watched);
+        System.out.println("Lista de títulos ordenados por ordem alfabética: " + Watched);
+
+        Watched.sort(Comparator.comparing(Title::getAnoDeLancamento));
+        System.out.println("Por ano de lançamento: " + Watched);
+
 //        System.out.println("O tamanho da sua lista de filmes é: " + Watched.size());
 //        System.out.println("Primeiro filme: " + Watched.get(0).getNome());
 //        System.out.println("Minha lista: " + Watched);
@@ -34,5 +43,14 @@ public class PrincipalWithLists {
             }
 
         }
+
+        ArrayList<String> findByArtist = new ArrayList<>();
+        findByArtist.add("Jennifer Lawrence");
+        findByArtist.add("Mark Hamill");
+        findByArtist.add("Brie Larson");
+
+        Collections.sort(findByArtist); //Ordem alfabética
+        System.out.println(findByArtist);
+
     }
 }

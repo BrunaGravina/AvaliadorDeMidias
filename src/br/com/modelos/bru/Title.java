@@ -1,6 +1,6 @@
 package br.com.modelos.bru;
 
-public class Title {
+public class Title implements Comparable <Title> {
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -69,5 +69,10 @@ public class Title {
 
     public int getTotalDeAvaliacoes() {
         return this.totalDeAvaliacoes;
+    }
+
+    @Override
+    public int compareTo(Title anotherTitle) {
+        return this.getNome().compareTo(anotherTitle.getNome());
     }
 }
