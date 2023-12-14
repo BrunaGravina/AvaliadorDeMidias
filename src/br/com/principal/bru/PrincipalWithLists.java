@@ -7,6 +7,7 @@ import br.com.modelos.bru.Title;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalWithLists {
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class PrincipalWithLists {
 
         Show serie = new Show("La Casa de Papel", 2017);
 
-        ArrayList<Title> Watched = new ArrayList<>();
+        List<Title> Watched = new ArrayList<>();
         Watched.add(terceiroFilme);
         Watched.add(outro);
         Watched.add(favorito);
@@ -44,7 +45,7 @@ public class PrincipalWithLists {
 
         }
 
-        ArrayList<String> findByArtist = new ArrayList<>();
+        List<String> findByArtist = new ArrayList<>();
         findByArtist.add("Jennifer Lawrence");
         findByArtist.add("Mark Hamill");
         findByArtist.add("Brie Larson");
