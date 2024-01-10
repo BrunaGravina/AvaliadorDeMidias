@@ -1,6 +1,9 @@
 package br.com.modelos.bru;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable <Title> {
+
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -14,9 +17,18 @@ public class Title implements Comparable <Title> {
         this.anoDeLancamento = anoDeLancamento;
     }
 
+    public Title(TitleOmdb titleOmdb) {
+        this.nome = titleOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(titleOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(titleOmdb.runtime().substring(0,3));
+    }
+
     @Override
     public String toString() {
-        return this.getNome() + " (" + getAnoDeLancamento() + ")";
+        return "nome= '" + nome + '\'' +
+                ", Lançamento= " + anoDeLancamento +
+                ", duração= " + duracaoEmMinutos +
+                '}';
     }
 
     public void exibeFichaTecnica () {
