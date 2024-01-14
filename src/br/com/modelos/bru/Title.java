@@ -1,7 +1,5 @@
 package br.com.modelos.bru;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Title implements Comparable <Title> {
 
     private String nome;
@@ -17,8 +15,12 @@ public class Title implements Comparable <Title> {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public Title(TitleOmdb titleOmdb) {
+    public Title(TitleOmdb titleOmdb) throws TitleOmdb.YearConversionErrorException {
         this.nome = titleOmdb.title();
+        if(titleOmdb.year().length() > 4){
+            throw new TitleOmdb.YearConversionErrorException("Não conseguimos converter o ano." +
+                    "Porque existem mais de 4 caracteres.");
+        }
         this.anoDeLancamento = Integer.valueOf(titleOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(titleOmdb.runtime().substring(0,3));
     }
